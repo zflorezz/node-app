@@ -20,13 +20,7 @@ export const create = async(req, res) => {
 
 export const fetch = async(req, res) => {
     try {
-        //res.json("Hello World")
-        const employees = await Employee.find()
-        if(employees.length === 0) {
-            return res.status(404).json({message: "Employees not found!"})
-        }
-
-        res.status(200).json(employees)
+        res.json("Hello World")
     } catch (error) {
         res.status(500).json({error: "Internal Server Error"})
     }
